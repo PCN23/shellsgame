@@ -2,9 +2,9 @@
 const ball1 = document.getElementById('ball-1');
 const ball2 = document.getElementById('ball-2');
 const ball3 = document.getElementById('ball-3');
-const button1 = document.getElementById('shellbtn1');
-const button2 = document.getElementById('shellbtn2');
-const button3 = document.getElementById('shellbtn3');
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+const button3 = document.getElementById('button3');
 const winsSpan = document.getElementById('wins');
 const lossesSpan = document.getElementById('losses');
 const totalSpan = document.getElementById('total');
@@ -30,10 +30,10 @@ function displayResults() {
 button1.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballPlace = Math.ceil(Math.random() * 3);
-    if (ballPlace === 1) {
+    const ballLocation = Math.ceil(Math.random() * 3);
+    if (ballLocation === 1) {
         ball1.classList.add('reveal');
-    } else if (ballPlace === 2) {
+    } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
     } else {
         ball3.classList.add('reveal');
