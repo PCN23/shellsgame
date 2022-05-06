@@ -33,6 +33,7 @@ button1.addEventListener('click', () => {
     const ballLocation = Math.ceil(Math.random() * 3);
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
+        wins++;
     } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
     } else {
@@ -49,6 +50,7 @@ button2.addEventListener('click', () => {
         ball1.classList.add('reveal');
     } else if (ballPlace === 2) {
         ball2.classList.add('reveal');
+        wins++;
     } else {
         ball3.classList.add('reveal');
     }
@@ -65,6 +67,7 @@ button3.addEventListener('click', () => {
         ball2.classList.add('reveal');
     } else {
         ball3.classList.add('reveal');
+        wins++;
     }
     displayResults();
 });
