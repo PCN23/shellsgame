@@ -1,10 +1,10 @@
 // import functions and grab DOM elements
-const ball1 = document.getElementById('ball1');
-const ball2 = document.getElementById('ball2');
-const ball3 = document.getElementById('ball3');
-const button1 = document.getElementById('shell1button');
-const button2 = document.getElementById('shell2button');
-const button3 = document.getElementById('shell3button');
+const ball1 = document.getElementById('ball-1');
+const ball2 = document.getElementById('ball-2');
+const ball3 = document.getElementById('ball-3');
+const button1 = document.getElementById('shellbtn1');
+const button2 = document.getElementById('shellbtn2');
+const button3 = document.getElementById('shellbtn3');
 const winsSpan = document.getElementById('wins');
 const lossesSpan = document.getElementById('losses');
 const totalSpan = document.getElementById('total');
@@ -28,17 +28,43 @@ function displayResults() {
 
 // set event listeners 
 button1.addEventListener('click', () => {
-  // get user input
     total++;
     resetBalls();
-  // use user input to update state 
     const ballPlace = Math.ceil(Math.random() * 3);
-    if (ballPlace ===1) {
+    if (ballPlace === 1) {
         ball1.classList.add('reveal');
     } else if (ballPlace === 2) {
-      ball2.classList.add('reveal');
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
     }
+    displayResults();
+});
 
-  // update DOM to reflect the new state
-  displayResults();
+button2.addEventListener('click', () => {
+    total++;
+    resetBalls();
+    const ballPlace = Math.ceil(Math.random() * 3);
+    if (ballPlace === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballPlace === 2) {
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
+    }
+    displayResults();
+});
+
+button3.addEventListener('click', () => {
+    total++;
+    resetBalls();
+    const ballPlace = Math.ceil(Math.random() * 3);
+    if (ballPlace === 1) {
+        ball1.classList.add('reveal');
+    } else if (ballPlace === 2) {
+        ball2.classList.add('reveal');
+    } else {
+        ball3.classList.add('reveal');
+    }
+    displayResults();
 });
