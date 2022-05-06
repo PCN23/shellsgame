@@ -2,13 +2,14 @@
 const ball1 = document.getElementById('ball-1');
 const ball2 = document.getElementById('ball-2');
 const ball3 = document.getElementById('ball-3');
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
-const button3 = document.getElementById('button3');
+
+const button1 = document.getElementById('button10');
+const button2 = document.getElementById('button20');
+const button3 = document.getElementById('button30');
+
 const winsSpan = document.getElementById('wins');
 const lossesSpan = document.getElementById('losses');
 const totalSpan = document.getElementById('total');
-
 
 // let state
 let wins = 0;
@@ -31,6 +32,7 @@ button1.addEventListener('click', () => {
     total++;
     resetBalls();
     const ballLocation = Math.ceil(Math.random() * 3);
+    
     if (ballLocation === 1) {
         ball1.classList.add('reveal');
         wins++;
@@ -45,10 +47,11 @@ button1.addEventListener('click', () => {
 button2.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballPlace = Math.ceil(Math.random() * 3);
-    if (ballPlace === 1) {
+    const ballLocation = Math.ceil(Math.random() * 3);
+
+    if (ballLocation === 1) {
         ball1.classList.add('reveal');
-    } else if (ballPlace === 2) {
+    } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
         wins++;
     } else {
@@ -60,10 +63,11 @@ button2.addEventListener('click', () => {
 button3.addEventListener('click', () => {
     total++;
     resetBalls();
-    const ballPlace = Math.ceil(Math.random() * 3);
-    if (ballPlace === 1) {
+    const ballLocation = Math.ceil(Math.random() * 3);
+
+    if (ballLocation === 1) {
         ball1.classList.add('reveal');
-    } else if (ballPlace === 2) {
+    } else if (ballLocation === 2) {
         ball2.classList.add('reveal');
     } else {
         ball3.classList.add('reveal');
