@@ -5,12 +5,13 @@
   
 }
 .shell {
-    width: 100px;
+    width: 200px;
     height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
 }
 .shell img {
     width: 100px;
