@@ -1,7 +1,11 @@
 /* add home page styles here */
 .shell-img {
+    height: 150px;
+    width: 150px;
   
 }
-.red-ball {
+.ball {
+    height: 100px;
+    width: 100px;
    
 }
