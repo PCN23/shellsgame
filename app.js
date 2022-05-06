@@ -14,6 +14,14 @@ const totalSpan = document.getElementById('total');
 let wins = 0;
 let total = 0;
 
+function resetBalls() {
+  ball1.classList.remove('reveal'):
+  ball2.classList.remove('reveal'):
+  ball3.classList.remove('reveal'):
+}
+
+
+
 // set event listeners 
 button1.addEventListener('click', () => {
   // get user input
